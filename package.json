@@ -2,10 +2,10 @@
     "name": "synthwave-x-fluoromachine",
     "displayName": "Synthwave x Fluoromachine",
     "description": "Synthwave '84 x Fluoromachine Theme",
-    "version": "0.0.11",
+    "version": "0.0.11a",
     "author": "Jeremy Laskar",
     "publisher": "webrender",
-	"icon": "icon.png",
+    "icon": "icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/webrender/synthwave-vscode-x-fluoromachine"
@@ -23,6 +23,12 @@
     "categories": [
         "Themes"
     ],
+    "activationEvents": [
+        "*",
+        "onCommand:synthwave84.enableNeon",
+        "onCommand:synthwave84.whatsNew"
+    ],
+    "main": "./src/extension.js",
     "contributes": {
         "themes": [
             {
@@ -30,6 +36,38 @@
                 "uiTheme": "vs-dark",
                 "path": "./themes/synthwave-x-fluoromachine.json"
             }
-        ]
+        ],
+        "commands": [
+            {
+                "command": "synthwave84.enableNeon",
+                "title": "Synthwave '84: Enable Neon Dreams"
+            },
+            {
+                "command": "synthwave84.disableNeon",
+                "title": "Synthwave '84: Disable Neon Dreams"
+            },
+            {
+                "command": "synthwave84.whatsNew",
+                "title": "Synthwave '84: What's New"
+            }
+        ],
+        "configuration": {
+            "title": "Synthwave '84",
+            "properties": {
+                "synthwave84.brightness": {
+                    "type": "number",
+                    "default": 0.45,
+                    "description": "Set the brightness value for the glow effect. 0.0 is fully transparent and 1.0 is fully bright"
+                },
+                "synthwave84.disableGlow": {
+                    "type": "boolean",
+                    "default": false,
+                    "description": "Disable the glow effect, but show Synthwave '84 editor chrome updates"
+                }
+            }
+        }
+    },
+    "dependencies": {
+        "semver": "^7.1.1"
     }
 }
