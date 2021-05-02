@@ -4,8 +4,8 @@
     "description": "Synthwave '84 x Fluoromachine Theme",
     "version": "0.0.12",
     "author": "Jeremy Laskar",
-    "publisher": "webrender",
-	"icon": "icon.png",
+    "publisher": "paulyc",
+    "icon": "icon.png",
     "repository": {
         "type": "git",
         "url": "https://github.com/webrender/synthwave-vscode-x-fluoromachine"
